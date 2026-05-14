@@ -35,7 +35,10 @@ export const Header = () => {
         </div>
 
         {isRootPage && (
-          <Button onClick={() => navigate(ROUTES.ADD_NEW_BOOK)}>
+          <Button
+            variant="primary"
+            onClick={() => navigate(ROUTES.ADD_NEW_BOOK)}
+          >
             <Plus size={18} />
             Добавить книгу
           </Button>

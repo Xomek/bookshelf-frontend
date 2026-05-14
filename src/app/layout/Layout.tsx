@@ -3,10 +3,10 @@ import { Header } from '../../components/Header';
 
 export const Layout = () => {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div>
       <Header />
 
-      <main className="flex flex-1">
+      <main className="flex flex-1 mx-auto w-full max-w-350 px-4">
         <Outlet />
       </main>
     </div>
