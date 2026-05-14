@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ES2022"],
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+
+    "paths": {
+      "@shared/*": ["./src/shared/*"]
+    }
+  },
+
+  "include": ["src"],
+
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
