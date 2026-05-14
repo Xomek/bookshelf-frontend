@@ -3,9 +3,12 @@ import { Header } from '../../components/Header';
 
 export const Layout = () => {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <Outlet />
+
+      <main className="flex flex-1">
+        <Outlet />
+      </main>
     </div>
   );
 };
