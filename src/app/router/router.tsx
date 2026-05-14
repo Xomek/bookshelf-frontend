@@ -1,9 +1,21 @@
 import { createBrowserRouter } from 'react-router';
-import { BooksPage } from '../../pages/BooksPage';
+import { BooksPage, AddNewBookPage } from '../../pages';
+import { ROUTES } from '@shared/constants/routes';
+import { Layout } from '../layout';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
-    element: <BooksPage />,
+    path: ROUTES.ROOT,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <BooksPage />,
+      },
+      {
+        path: ROUTES.ADD_NEW_BOOK,
+        element: <AddNewBookPage />,
+      },
+    ],
   },
 ]);
