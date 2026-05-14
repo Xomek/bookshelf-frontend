@@ -1,4 +1,5 @@
 import { Button } from '@shared/components/ui/Button';
+import { Plus } from 'lucide-react';
 
 export const Header = () => {
   return (
@@ -10,7 +11,10 @@ export const Header = () => {
           <span className="text-sm text-zinc-500">6 книг в коллекции</span>
         </div>
 
-        <Button>Добавить книгу</Button>
+        <Button>
+          <Plus size={18} />
+          Добавить книгу
+        </Button>
       </div>
     </header>
   );
