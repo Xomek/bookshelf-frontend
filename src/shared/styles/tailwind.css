@@ -2,4 +2,9 @@
 
 @theme {
   --color-primary: #18181b;
+  --color-background: #ffffff;
+  --color-surface: #f4f4f5;
+  --color-text: #18181b;
+  --color-text-secondary: #71717a;
+  --color-border: #e4e4e7;
 }
