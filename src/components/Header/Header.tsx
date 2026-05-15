@@ -1,9 +1,12 @@
 import { ROUTES } from '@shared/constants/routes';
+import { useHeaderContext } from '@shared/providers/header/useHeaderContext';
 import { Button } from '@shared/ui/Button';
-import { Book, Plus, ArrowLeft } from 'lucide-react';
+import { Book, Plus, ArrowLeft, Settings } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router';
 
 export const Header = () => {
+  const { header } = useHeaderContext();
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,15 +25,17 @@ export const Header = () => {
             />
           )}
 
-          <div>
-            <h1 className="text-2xl">
-              {isRootPage ? 'Моя библиотека' : 'Добавить книгу'}
-            </h1>
-            <span className="text-sm text-zinc-500">
-              {isRootPage
-                ? '6 книг в коллекции'
-                : 'Создайте новую запись в вашей библиотеке'}
-            </span>
+          <div className="relative">
+            <h1 className="text-2xl">{header.title}</h1>
+            <span className="text-sm text-zinc-500">{header.subtitle}</span>
+
+            {isRootPage && (
+              <Settings
+                size={24}
+                onClick={() => navigate(ROUTES.SETTINGS)}
+                className="absolute -right-8 top-0 cursor-pointer"
+              />
+            )}
           </div>
         </div>
 
