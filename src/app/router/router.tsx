@@ -4,6 +4,7 @@ import {
   AddNewBookPage,
   SettingsPage,
   ReaderPage,
+  EditBookPage,
 } from '../../pages';
 import { ROUTES } from '@shared/constants/routes';
 import { Layout } from '../layout';
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: ROUTES.ADD_NEW_BOOK,
         element: <AddNewBookPage />,
+      },
+      {
+        path: ROUTES.EDIT_BOOK,
+        element: <EditBookPage />,
       },
       {
         path: ROUTES.READER,
