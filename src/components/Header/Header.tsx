@@ -13,8 +13,8 @@ export const Header = () => {
   const isRootPage = location.pathname === ROUTES.ROOT;
 
   return (
-    <header className="flex h-25 items-center border-b border-zinc-200 mb-8">
-      <div className="mx-auto flex w-full max-w-350 items-center justify-between px-4">
+    <header className="flex h-25 items-center border-b border-zinc-200 dark:border-zinc-700 mb-8">
+      <div className="mx-auto flex w-full max-w-350 items-center justify-between flex-wrap px-4">
         <div className="flex items-center gap-4">
           {isRootPage ? (
             <Book size={40} />
