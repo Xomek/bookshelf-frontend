@@ -13,9 +13,9 @@ export const Toggle = ({ checked, onChange, label }: ToggleProps) => {
       <button
         onClick={() => onChange(!checked)}
         className={cn(
-          `relative h-6 w-11 rounded-full transition-colors bg-zinc-300 dark:bg-zinc-600`,
+          `relative h-6 w-11 rounded-full transition-colors bg-zinc-300 dark:bg-zinc-600 hover:bg-zinc-400 dark:hover:bg-zinc-500`,
           {
-            'bg-primary': checked,
+            'bg-primary hover:bg-primary/90': checked,
           },
         )}
       >

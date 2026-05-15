@@ -19,22 +19,27 @@ export const Header = () => {
           {isRootPage ? (
             <Book size={40} />
           ) : (
-            <ArrowLeft
-              className="cursor-pointer w-10"
+            <button
               onClick={() => navigate(-1)}
-            />
+              className="p-2 rounded-lg transition-colors hover:bg-surface cursor-pointer"
+            >
+              <ArrowLeft className="w-6 h-6" />
+            </button>
           )}
 
-          <div className="relative">
-            <h1 className="text-2xl">{header.title}</h1>
-            <span className="text-sm text-zinc-500">{header.subtitle}</span>
+          <div className="relative flex items-center gap-3">
+            <div>
+              <h1 className="text-2xl">{header.title}</h1>
+              <span className="text-sm text-zinc-500">{header.subtitle}</span>
+            </div>
 
             {isRootPage && (
-              <Settings
-                size={24}
+              <button
                 onClick={() => navigate(ROUTES.SETTINGS)}
-                className="absolute -right-8 top-0 cursor-pointer"
-              />
+                className="absolute -right-12 -top-2 p-2 rounded-lg transition-colors hover:bg-surface cursor-pointer"
+              >
+                <Settings size={24} />
+              </button>
             )}
           </div>
         </div>
