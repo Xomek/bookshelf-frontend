@@ -9,11 +9,13 @@ export const Layout = () => {
     <ThemeProvider>
       <CardSettingsProvider>
         <HeaderProvider>
-          <Header />
+          <div className="h-screen bg-background text-text flex flex-col">
+            <Header />
 
-          <main className="flex flex-1 mx-auto w-full max-w-350 px-4">
-            <Outlet />
-          </main>
+            <main className="flex-1 mx-auto w-full max-w-350 px-4 flex flex-col min-h-0">
+              <Outlet />
+            </main>
+          </div>
         </HeaderProvider>
       </CardSettingsProvider>
     </ThemeProvider>

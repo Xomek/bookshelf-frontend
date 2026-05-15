@@ -20,7 +20,7 @@ export const Tabs = <T extends string>({
           className={cn(
             'px-4 py-2 text-sm font-medium rounded-lg transition-colors',
             active === tab.value
-              ? 'bg-primary text-white hover:bg-primary/90'
+              ? 'bg-primary text-white dark:text-zinc-900 hover:bg-primary/90'
               : 'bg-surface text-text-secondary hover:text-text hover:bg-border',
           )}
         >
