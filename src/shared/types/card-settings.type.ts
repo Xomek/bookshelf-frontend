@@ -1,15 +1,11 @@
 export interface CardSettings {
   showCover: boolean;
-  showTitle: boolean;
   showAuthor: boolean;
+  showGenre: boolean;
+  showPages: boolean;
+  showStatus: boolean;
+  showDescription: boolean;
   showRating: boolean;
   showProgress: boolean;
+  compactMode: boolean;
 }
-
-export const DEFAULT_CARD_SETTINGS: CardSettings = {
-  showCover: true,
-  showTitle: true,
-  showAuthor: true,
-  showRating: true,
-  showProgress: true,
-};

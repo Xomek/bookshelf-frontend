@@ -1,5 +1,5 @@
 import { PropsWithChildren, useCallback } from 'react';
-import { DEFAULT_CARD_SETTINGS } from '@shared/types/card-settings.type';
+import { DEFAULT_CARD_SETTINGS } from '@shared/constants/card-settings';
 import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { CardSettingsContext } from './CardSettingsContext';
 

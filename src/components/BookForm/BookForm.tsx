@@ -69,7 +69,7 @@ export const BookForm = ({
           <label className="block mb-6">
             <span className="block mb-2 font-semibold">Описание</span>
             <textarea
-              className="h-30 w-full rounded-lg border border-gray-200 p-3 bg-zinc-50 transition-colors hover:border-gray-300 focus:border-primary focus:outline-none"
+              className="h-30 w-full rounded-lg border border-border bg-surface p-3 transition-colors hover:border-primary focus:border-primary focus:outline-none"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Описание книги..."
@@ -97,7 +97,7 @@ export const BookForm = ({
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <Upload size={40} className="text-zinc-300" />
+                <Upload size={40} className="text-text-secondary" />
               )}
             </div>
             <label className="block mt-3">
@@ -129,9 +129,9 @@ export const BookForm = ({
                 </div>
               ) : (
                 <label className="block">
-                  <div className="border-2 border-dashed border-zinc-300 bg-zinc-50 rounded-lg flex flex-col items-center justify-center gap-2 py-6 cursor-pointer hover:bg-zinc-100 transition-colors">
-                    <Upload size={28} className="text-zinc-400" />
-                    <span className="text-xs text-zinc-400 text-center px-2">
+                  <div className="border-2 border-dashed border-border bg-surface rounded-lg flex flex-col items-center justify-center gap-2 py-6 cursor-pointer hover:bg-border transition-colors">
+                    <Upload size={28} className="text-text-secondary" />
+                    <span className="text-xs text-text-secondary text-center px-2">
                       Перетащите PDF или нажмите для выбора
                     </span>
                   </div>
